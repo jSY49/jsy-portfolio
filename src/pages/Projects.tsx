@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import getProjects from "../shared/api/getProjecs";
+import { useState } from "react";
+import MarkdownModal from "../components/MarkdownModal";
 
 export default function Projects() {
 	const {
@@ -10,6 +12,8 @@ export default function Projects() {
 		queryKey: ["projects"],
 		queryFn: getProjects,
 	});
+
+	const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
 	if (isLoading) {
 		return <p>불러오는 중</p>;
@@ -23,9 +27,22 @@ export default function Projects() {
 		<>
 			<ul>
 				{projects?.map((project) => (
-					<li key={project.id}>{project.title}</li>
+					<li
+						key={project.id}
+						onClick={() =>
+							setSelectedProject(`/docs/${project.slug}.md`)
+						}
+					>
+						{project.title}
+					</li>
 				))}
 			</ul>
+
+			<MarkdownModal
+				isOpen={selectedProject !== null}
+				onClose={() => setSelectedProject(null)}
+				filePath={selectedProject ?? ""}
+			/>
 		</>
 	);
 }

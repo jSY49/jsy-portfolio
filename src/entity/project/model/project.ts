@@ -3,5 +3,6 @@ export interface Project {
 	title: string;
 	summary: string;
 	repository_url: string;
+	slug: string;
 	created_at: string;
 }
