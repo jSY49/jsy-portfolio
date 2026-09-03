@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 줄기 -->
+  <path d="M50 20 Q52 10 58 6" stroke="#5C3A21" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- 잎사귀 -->
+  <path d="M52 12 Q65 8 68 20 Q55 22 52 12 Z" fill="#4CAF50"/>
+  <!-- 사과 몸통 -->
+  <path
+    d="M50 22
+       C30 22 15 40 15 60
+       C15 80 30 92 50 92
+       C70 92 85 80 85 60
+       C85 40 70 22 50 22 Z"
+    fill="#E53935"
+  />
+  <!-- 하이라이트 -->
+  <ellipse cx="35" cy="45" rx="8" ry="14" fill="#FF7B72" opacity="0.5"/>
+</svg>
