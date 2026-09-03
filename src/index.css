@@ -8,3 +8,8 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+/* 스크롤 없어도 스크롤 자리를 확보해 두어 화면 이동 시 폭 변화 없게 해줌 */
+html {
+	scrollbar-gutter: stable;
+}
