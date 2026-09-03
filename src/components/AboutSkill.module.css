@@ -1,0 +1,38 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	align-items: flex-start;
+	padding: 8px;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.skills {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 32px;
+	padding: 0;
+}
+
+.skill_image {
+}
+.skill_type {
+	width: 160px;
+	/* flex 아이템이 부모 공간이 부족할 때 얼마나 줄어 들지  */
+	flex-shrink: 0;
+}
+
+.skill_list {
+	display: flex;
+	/* 한 줄에 다 안들어가면 다음줄로 넘어가도록 */
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none;
+}
+
+.skill_item {
+	
+}
