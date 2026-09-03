@@ -6,6 +6,7 @@ import github from "../assets/icons/github.svg";
 import mail from "../assets/icons/mail.svg";
 import phone from "../assets/icons/phone.svg";
 import pen from "../assets/icons/pen.svg";
+import AboutSkill from "../components/AboutSkill";
 
 export default function About() {
 	return (
@@ -61,15 +62,9 @@ export default function About() {
 			</div>
 
 			<div className={styles.about_skills}>
-				<h3 className={styles.about_skills_title}>Skills</h3>
-
+				<h3 className={styles.title}>Skills</h3>
 				<article className={styles.skill_section}>
-					<h4 className={styles.skill_type}>Language</h4>
-					<ul className={styles.skill_list}>
-						<li className={styles.skill_item}>Java</li>
-						<li className={styles.skill_item}>Kotlin</li>
-						<li className={styles.skill_item}>C#</li>
-					</ul>
+					<AboutSkill />
 				</article>
 			</div>
 		</section>

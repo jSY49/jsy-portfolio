@@ -3,7 +3,7 @@
 	flex-direction: column;
 	gap: 24px;
 	width: 100%;
-	flex:1
+	flex: 1;
 }
 
 .about_profile {
@@ -36,19 +36,6 @@
 	background-color: aliceblue;
 }
 
-.about_skills {
-	background-color: aquamarine;
-	min-height: 0;
-	overflow-y: auto;
-}
-
-.about_skills_title {
-}
-
-.skill_section {
-
-}
-
 .about_info {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -56,6 +43,17 @@
 	gap: 16px;
 	flex: 1;
 	min-width: 0;
+}
+
+.about_skills {
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	padding: 24px 0;
+}
+ 
+.skill_section {
+	
 }
 
 @media (max-width: 1024px) {
