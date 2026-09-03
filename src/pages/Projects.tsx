@@ -18,18 +18,29 @@ export default function Projects() {
 	const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
 	if (isLoading) {
-		return <p>불러오는 중</p>;
+		return (
+			<div className={styles.status_wrapper}>
+				<div className={styles.spinner} />
+				<p>불러오는 중...</p>
+			</div>
+		);
 	}
 
 	if (error) {
-		return <p>ERROR : {(error as Error).message}</p>;
+		return (
+			<div className={styles.status_wrapper}>
+				<p className={styles.error_text}>
+					문제가 발생했어요: {(error as Error).message}
+				</p>
+			</div>
+		);
 	}
 
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.title}>Projects</h2>
 
-			<div className = {styles.items}>
+			<div className={styles.items}>
 				{projects?.map((project) => (
 					<ProjectItem
 						key={project.id}

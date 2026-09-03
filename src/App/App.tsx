@@ -19,7 +19,7 @@ function App() {
 							<Link to={"/projects"}>Projects</Link>
 						</li>
 						<li className={styles.nav_item}>
-							<Link to={"/career"}>Career&Education</Link>
+							<Link to={"/career"}>Career</Link>
 						</li>
 					</ul>
 				</nav>

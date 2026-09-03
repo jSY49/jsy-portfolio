@@ -49,21 +49,6 @@ export default function Career() {
 				</div>
 			</article>
 
-			<article className={styles.career}>
-				<div className={styles.corp_image_wrapper}>
-					<img
-						className={styles.corp_image}
-						src=""
-						alt=""
-					/>
-				</div>
-				<div className={styles.career_info}>
-					<h3 className={styles.corp_name}>자격증 이름</h3>
-					<p className={styles.period}>취득일</p>
-					<p className={styles.corp_desc}>발급 기관</p>
-					<p className={styles.position}>자격증</p>
-				</div>
-			</article>
 		</section>
 	);
 }
