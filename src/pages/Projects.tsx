@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import getProjects from "../shared/api/getProjecs";
 import { useState } from "react";
 import MarkdownModal from "../components/MarkdownModal";
+import styles from "./Projects.module.css";
+import ProjectItem from "../components/ProjectItem";
 
 export default function Projects() {
 	const {
@@ -24,25 +26,27 @@ export default function Projects() {
 	}
 
 	return (
-		<>
-			<ul>
+		<div className={styles.container}>
+			<h2 className={styles.title}>Projects</h2>
+
+			<div className = {styles.items}>
 				{projects?.map((project) => (
-					<li
+					<ProjectItem
 						key={project.id}
+						title={project.title}
+						summary={project.summary}
+						repository_url={project.repository_url}
 						onClick={() =>
 							setSelectedProject(`/docs/${project.slug}.md`)
 						}
-					>
-						{project.title}
-					</li>
+					/>
 				))}
-			</ul>
-
+			</div>
 			<MarkdownModal
 				isOpen={selectedProject !== null}
 				onClose={() => setSelectedProject(null)}
 				filePath={selectedProject ?? ""}
 			/>
-		</>
+		</div>
 	);
 }

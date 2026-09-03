@@ -1,0 +1,28 @@
+.container {
+	padding: 24px;
+}
+
+.items {
+	display: grid;
+	/* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+	/* 
+    calc(50% - 8px) : 컨테이너 너비의 절반에서 8픽셀 뺀 값 = 간격 16 
+    max : 그 중 더 큰 값을 선택 
+    minmax(a, fr) : a는 아이템의 최소 크기, 1fr은 남는 공간을 균등하게 차지  
+    repeat - autofit : 너비에 맞춰 몇열이 들어갈지 자동 계산 - 빈칸이 있으면 그 공간 채우기
+     */
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(max(300px, calc(50% - 8px)), 1fr)
+	);
+	align-items: center;
+	gap: 16px;
+	flex: 1;
+	min-width: 0;
+}
+
+.title {
+	font-size: 3rem;
+	align-self: center;
+	padding: 16px;
+}

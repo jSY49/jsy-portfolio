@@ -1,0 +1,29 @@
+.container {
+	background-color: white;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+	border-radius: 18px;
+	padding: 16px;
+}
+
+.container:hover {
+	transform: scale(1.02);
+}
+
+.title {
+}
+
+.period {
+}
+
+.teamsize {
+}
+
+.overview {
+}
+
+.url {
+}
+
+.tags {
+}

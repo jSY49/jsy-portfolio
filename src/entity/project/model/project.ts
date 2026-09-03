@@ -6,3 +6,10 @@ export interface Project {
 	slug: string;
 	created_at: string;
 }
+
+export interface ProjectDetail {
+	overview: string;
+	tags: string[];
+	period: string;
+	teamSize: number;
+}
