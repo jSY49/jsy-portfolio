@@ -1,5 +1,11 @@
 import type { IconType } from "react-icons";
-import { LuAppWindow, LuCode, LuGlobe, LuMonitor, LuServer, LuWrench } from "react-icons/lu";
+import {
+	LuAppWindow,
+	LuCode,
+	LuGlobe,
+	LuServer,
+	LuWrench,
+} from "react-icons/lu";
 import { SiAndroid, SiIos, SiReact } from "react-icons/si";
 
 // src/data/skills.ts
