@@ -1,0 +1,35 @@
+.overlay {
+	position: fixed;
+	inset: 0; /* top/right/bottom/left를 전부 0으로 → 화면 전체를 덮음 */
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	z-index: 1000; /* 다른 요소들보다 위 레이어에 그려지게*/
+	align-items: center;
+}
+
+.modal {
+	background: white;
+	border-radius: 8px;
+	/* 모서리 밖으로 나가는 건 다 잘라냄 (스크롤바가 라운드를 가리는 것 방지) */
+	overflow: hidden;
+	width: min(90vw, 1000px);
+	max-height: 85vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.modalHeader {
+	display: flex;
+	justify-content: flex-end;
+	padding: 12px 12px 0;
+}
+
+.modalBody {
+	padding: 12px 24px 24px;
+	/* 내용이 max-height를 넘으면 스크롤 생성 (스크롤은 안쪽에서만, 버튼과 겹치지 않음) */
+	overflow-y: auto;
+}
+
+.closeButton {
+}
