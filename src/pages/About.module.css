@@ -3,7 +3,7 @@
 	flex-direction: column;
 	gap: 24px;
 	width: 100%;
-	min-height: 100vh;
+	flex:1
 }
 
 .about_profile {
@@ -46,15 +46,7 @@
 }
 
 .skill_section {
-}
 
-.skill_type {
-}
-
-.skill_list {
-}
-
-.skill_item {
 }
 
 .about_info {
