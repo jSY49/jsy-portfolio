@@ -16,10 +16,10 @@ function App() {
 							<Link to={"/"}>About Me</Link>
 						</li>
 						<li className={styles.nav_item}>
-							<Link to={"/career"}>Career</Link>
+							<Link to={"/projects"}>Projects</Link>
 						</li>
 						<li className={styles.nav_item}>
-							<Link to={"/projects"}>Projects</Link>
+							<Link to={"/career"}>Career</Link>
 						</li>
 					</ul>
 				</nav>
