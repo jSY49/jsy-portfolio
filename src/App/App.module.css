@@ -2,3 +2,24 @@
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 16px;
+	/* background-color: antiquewhite; */
+}
+
+.header_title {
+	font-weight: 700;
+}
+
+.header_nav {
+	display: flex;
+	gap: 24px;
+}
+
+.nav_item {
+	list-style: none;
+}

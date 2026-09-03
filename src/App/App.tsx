@@ -8,18 +8,17 @@ function App() {
 	return (
 		<div className={styles.app}>
 			{/* header */}
-			<header>
+			<header className={styles.header}>
 				<h1 className={styles.header_title}> JSY's Portfolio</h1>
-
 				<nav>
 					<ul className={styles.header_nav}>
-						<li>
+						<li className={styles.nav_item}>
 							<Link to={"/"}>About Me</Link>
 						</li>
-						<li>
+						<li className={styles.nav_item}>
 							<Link to={"/career"}>Career</Link>
 						</li>
-						<li>
+						<li className={styles.nav_item}>
 							<Link to={"/projects"}>Projects</Link>
 						</li>
 					</ul>
