@@ -1,0 +1,87 @@
+.top {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.about_profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 0;
+	overflow-y: auto;
+}
+
+.title {
+	font-size: 3rem;
+	align-self: center;
+	padding: 16px;
+}
+
+.about_profile_detail {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.about_profile_img {
+	padding: 16px;
+	margin: 32px;
+	size: 20rem;
+	background-color: aliceblue;
+}
+
+.about_skills {
+	background-color: aquamarine;
+	min-height: 0;
+	overflow-y: auto;
+}
+
+.about_skills_title {
+}
+
+.skill_section {
+}
+
+.skill_type {
+}
+
+.skill_list {
+}
+
+.skill_item {
+}
+
+.about_info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	align-items: center;
+	gap: 16px;
+	flex: 1;
+	min-width: 0;
+}
+
+@media (max-width: 1024px) {
+	/* .about_info {
+		grid-template-columns: repeat(2, 1fr);
+	} */
+}
+
+@media (max-width: 640px) {
+	.about_profile_detail {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	/* .about_info {
+		grid-template-columns: repeat(1, 1fr);
+	} */
+}

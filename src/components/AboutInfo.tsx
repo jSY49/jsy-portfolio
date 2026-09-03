@@ -4,16 +4,25 @@ interface AboutInfoProps {
 	src: string;
 	type: string;
 	value: string;
+	onClick?: () => void;
 }
 
-export default function AboutInfo({ src, type, value }: AboutInfoProps) {
+export default function AboutInfo({
+	src,
+	type,
+	value,
+	onClick,
+}: AboutInfoProps) {
 	return (
-		<div className={styles.container}>
+		<div
+			className={styles.container}
+			onClick={onClick}
+		>
 			<div className={styles.img}>
 				<img
 					className={styles.icon}
-                    src={src}
-                    width={48}
+					src={src}
+					width={48}
 				/>
 			</div>
 			<div className={styles.info}>
