@@ -11,7 +11,12 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 24px 16px;
-	/* background-color: antiquewhite; */
+	/* 헤더 상단 고정*/
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 100;
+	box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header_left {

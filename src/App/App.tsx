@@ -6,8 +6,8 @@ import Projects from "../pages/Projects";
 
 function App() {
 	return (
-		<div className={styles.app}>
-			{/* header */}
+		<div>
+			{/* header - 너비 확장 가능 하게 app 밖으로 분리 */}
 			<header className={styles.header}>
 				<div className={styles.header_left}>
 					<span className={styles.header_logo} />
@@ -55,21 +55,23 @@ function App() {
 				</nav>
 			</header>
 
-			{/* content */}
-			<Routes>
-				<Route
-					path="/"
-					element={<About />}
-				/>
-				<Route
-					path="/career"
-					element={<Career />}
-				/>
-				<Route
-					path="/projects"
-					element={<Projects />}
-				/>
-			</Routes>
+			<div className={styles.app}>
+				{/* content */}
+				<Routes>
+					<Route
+						path="/"
+						element={<About />}
+					/>
+					<Route
+						path="/career"
+						element={<Career />}
+					/>
+					<Route
+						path="/projects"
+						element={<Projects />}
+					/>
+				</Routes>
+			</div>
 		</div>
 	);
 }
