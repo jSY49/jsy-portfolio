@@ -6,6 +6,8 @@ import mail from "../assets/icons/mail.svg";
 import phone from "../assets/icons/phone.svg";
 import pen from "../assets/icons/pen.svg";
 import AboutSkill from "../components/AboutSkill";
+import { FaCertificate } from "react-icons/fa";
+import { TbCertificate } from "react-icons/tb";
 
 export default function About() {
 	return (
@@ -28,7 +30,9 @@ export default function About() {
 								<h4 className={styles.about_summary_job}>
 									안드로이드{" "}
 								</h4>
-								<p className={styles.about_summary_desc}>설명</p>
+								<p className={styles.about_summary_desc}>
+									설명
+								</p>
 							</div>
 
 							<div className={styles.about_item}>
@@ -67,31 +71,28 @@ export default function About() {
 				</div>
 
 				<div className={styles.about_skills}>
-					<h3 className={styles.title}>Skills</h3>
+					<h3 className={styles.title}>SKILLS</h3>
 					<article className={styles.skill_section}>
 						<AboutSkill />
 					</article>
 				</div>
 
 				<div className={styles.about_certification}>
-					<h3 className={styles.about_certification_title}>
-						Certification
-					</h3>
+					<h3 className={styles.title}>CERTIFICATION</h3>
 					<article className={styles.skill_section}>
-						<article className={styles.career}>
+						<article className={styles.certifi}>
 							<div className={styles.corp_image_wrapper}>
-								<img
+								<TbCertificate
 									className={styles.corp_image}
-									src=""
-									alt=""
+									color="#3b60e4"
 								/>
 							</div>
 							<div className={styles.career_info}>
 								<h3 className={styles.corp_name}>
 									자격증 이름
 								</h3>
-								<p className={styles.period}>취득일</p>
 								<p className={styles.corp_desc}>발급 기관</p>
+								<p className={styles.period}>취득일</p>
 								{/* <p className={styles.position}>자격증</p> */}
 							</div>
 						</article>
