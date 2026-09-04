@@ -39,7 +39,9 @@ export default function Projects() {
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.title}>Projects</h2>
-
+			<p className={styles.sub}>
+				카드를 누르면 프로젝트 README를 확인할 수 있습니다.
+			</p>
 			<div className={styles.items}>
 				{projects?.map((project) => (
 					<ProjectItem
