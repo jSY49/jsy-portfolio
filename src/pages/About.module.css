@@ -6,6 +6,7 @@
 
 .top {
 	align-self: center;
+	width: 100%;
 	max-width: 1200px;
 	flex: 1;
 }
@@ -22,7 +23,7 @@
 }
 
 .title {
-	font-size: 12px;
+	font-size: 24px;
 	width: 100%;
 	align-self: flex-start;
 	padding: 0px 2rem;
