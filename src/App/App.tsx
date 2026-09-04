@@ -6,7 +6,7 @@ import Projects from "../pages/Projects";
 
 function App() {
 	return (
-		<div>
+		<div className={styles.page}>
 			{/* header - 너비 확장 가능 하게 app 밖으로 분리 */}
 			<header className={styles.header}>
 				<div className={styles.header_left}>
