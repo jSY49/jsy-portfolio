@@ -1,6 +1,7 @@
-import { LuArrowRight, LuLink } from "react-icons/lu";
+import { LuArrowRight } from "react-icons/lu";
 import type { ProjectDetail } from "../entity/project/model/project";
 import styles from "./ProjectItem.module.css";
+import { FaGithub } from "react-icons/fa";
 
 export interface ProjectProps {
 	title: string;
@@ -27,11 +28,17 @@ export default function ProjectItem({
 			className={styles.container}
 			onClick={onClick}
 		>
+			<img
+				className={styles.project_main_img}
+				src="/profile.jpg"
+				alt="대표 이미지"
+			/>
+
+			<h4 className={styles.title}>{title}</h4>
 			<p className={styles.meta}>
 				{detail?.period}
 				{detail?.teamSize ? ` • ${detail.teamSize}인 팀` : null}
 			</p>
-			<h4 className={styles.title}>{title}</h4>
 			<p className={styles.overview}>{detail?.overview}</p>
 
 			{detail?.tags && detail.tags.length > 0 && (
@@ -54,10 +61,9 @@ export default function ProjectItem({
 					className={styles.url}
 					href={repository_url}
 					target="_blank"
-					rel="noreferrer"
 					onClick={(e) => e.stopPropagation()}
 				>
-					<LuLink className={styles.link_icon} />
+					<FaGithub className={styles.link_icon} />
 					{repository_url}
 				</a>
 				<span className={styles.detail_link}>

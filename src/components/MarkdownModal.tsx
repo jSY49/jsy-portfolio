@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import styles  from "./MarkdownModal.module.css";
+import styles from "./MarkdownModal.module.css";
+import { SiGooglegemini } from "react-icons/si";
 
 interface MarkdownModalProps {
+	title: string | null;
 	isOpen: boolean;
 	onClose: () => void;
 	filePath: string;
 }
 
-export default function MarkdownModal({ isOpen, onClose, filePath }: MarkdownModalProps) {
+export default function MarkdownModal({
+	title,
+	isOpen,
+	onClose,
+	filePath,
+}: MarkdownModalProps) {
 	const [content, setContent] = useState("");
 
 	useEffect(() => {
@@ -21,6 +28,7 @@ export default function MarkdownModal({ isOpen, onClose, filePath }: MarkdownMod
 
 	if (!isOpen) return null;
 
+
 	return (
 		<div
 			className={styles.overlay}
@@ -32,6 +40,7 @@ export default function MarkdownModal({ isOpen, onClose, filePath }: MarkdownMod
 				onClick={(e) => e.stopPropagation()}
 			>
 				<div className={styles.modalHeader}>
+					<h1 className={styles.modal_title}>{title}</h1>
 					<button
 						className={styles.closeButton}
 						onClick={onClose}
@@ -39,11 +48,18 @@ export default function MarkdownModal({ isOpen, onClose, filePath }: MarkdownMod
 						✕
 					</button>
 				</div>
+				<hr className={styles.divider} />
 				<div className={styles.modalBody}>
 					<ReactMarkdown>{content}</ReactMarkdown>
+				</div>
+
+				{/* 챗봇 */}
+				<div className={styles.chat_container}>
+					<div className={styles.chat_header}>
+						 <SiGooglegemini/>
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
- 

@@ -16,6 +16,7 @@ export default function Projects() {
 	});
 
 	const [selectedProject, setSelectedProject] = useState<string | null>(null);
+	const [selectedProjectTitle, setSelectedProjectTitle] = useState<string | null>(null);
 
 	if (isLoading) {
 		return (
@@ -38,7 +39,7 @@ export default function Projects() {
 
 	return (
 		<div className={styles.container}>
-			<h2 className={styles.title}>Projects</h2>
+			<h2 className={styles.title}>PROJECTS</h2>
 			<p className={styles.sub}>
 				카드를 누르면 프로젝트 README를 확인할 수 있습니다.
 			</p>
@@ -49,15 +50,20 @@ export default function Projects() {
 						title={project.title}
 						summary={project.summary}
 						repository_url={project.repository_url}
-						onClick={() =>
-							setSelectedProject(`/docs/${project.slug}.md`)
-						}
+						onClick={() => {
+							setSelectedProject(`/docs/${project.slug}.md`);
+							setSelectedProjectTitle(project.title);
+						}}
 					/>
 				))}
 			</div>
 			<MarkdownModal
+				title = {selectedProjectTitle}
 				isOpen={selectedProject !== null}
-				onClose={() => setSelectedProject(null)}
+				onClose={() => {
+					setSelectedProject(null);
+					setSelectedProjectTitle(null);
+				}}
 				filePath={selectedProject ?? ""}
 			/>
 		</div>

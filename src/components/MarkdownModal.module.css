@@ -21,15 +21,45 @@
 
 .modalHeader {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	padding: 12px 12px 0;
 }
 
+.modal_title {
+	margin: 4px;
+}
+
+.divider {
+	border: none;
+	border-top: 1px solid #eceef3;
+	margin: 0 0 16px;
+}
+
 .modalBody {
-	padding: 12px 24px 24px;
+	padding: 12px 2rem 24px;
 	/* 내용이 max-height를 넘으면 스크롤 생성 (스크롤은 안쪽에서만, 버튼과 겹치지 않음) */
 	overflow-y: auto;
 }
 
 .closeButton {
+	margin: 8px;
+	padding: 0.5rem;
+	border-radius: 50%;
+	background: #f6f7fa;
+	border: 1px solid #e7e9ef;
+	color: #5d6472;
+	width: 34px;
+	height: 34px;
+	cursor: pointer;
+	font-size: 14px;
+	flex-shrink: 0;
+}
+
+.closeButton:hover {
+	background-color: #edf1fe;
+}
+
+/* 챗봇 */
+.chat_container{
+	
 }

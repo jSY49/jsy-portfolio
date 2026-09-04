@@ -27,7 +27,7 @@ export default function Career() {
 					</ul>
 				</div>
 			</article>
-
+			
 			<h2 className={styles.title}>Education</h2>
 			<article className={styles.career}>
 				<div className={styles.corp_image_wrapper}>
