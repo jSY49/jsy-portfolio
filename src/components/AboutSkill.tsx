@@ -1,5 +1,4 @@
 import { skillList } from "../data/skill/skills";
-import getContrastColor from "../shared/Utils/getContrastColor";
 import styles from "./AboutSkill.module.css";
 
 export default function AboutSkill() {
@@ -15,7 +14,6 @@ export default function AboutSkill() {
 						<Icon
 							className={styles.skill_image}
 							color={skill.values[0].color}
-							size={32}
 						/>
 						<h4 className={styles.skill_type}>{skill.type}</h4>
 						<ul className={styles.skill_list}>

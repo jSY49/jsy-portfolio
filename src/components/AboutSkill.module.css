@@ -3,10 +3,13 @@
 	flex-direction: column;
 	gap: 24px;
 	align-items: flex-start;
-	padding: 8px;
+	padding: 2rem 3rem;
 	width: 100%;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
+	border-radius: 20px;
+	border: 1px solid #f0f1f5;
+	margin: 32px;
 }
 
 .skills {
@@ -18,11 +21,15 @@
 }
 
 .skill_image {
+	width: 24px;
+	height: 24xp;
+	flex-shrink: 0;
 }
 .skill_type {
 	width: 160px;
 	/* flex 아이템이 부모 공간이 부족할 때 얼마나 줄어 들지  */
 	flex-shrink: 0;
+	font-size: 1.3rem;
 }
 
 .skill_list {
@@ -34,5 +41,12 @@
 }
 
 .skill_item {
-	
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: #f8f9fc;
+	padding: 8px 10px;
+	border-radius: 0.5rem;
+	margin-top: 4px;
+	width: fit-content;
 }
