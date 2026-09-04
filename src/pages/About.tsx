@@ -6,7 +6,6 @@ import mail from "../assets/icons/mail.svg";
 import phone from "../assets/icons/phone.svg";
 import pen from "../assets/icons/pen.svg";
 import AboutSkill from "../components/AboutSkill";
-import { FaCertificate } from "react-icons/fa";
 import { TbCertificate } from "react-icons/tb";
 
 export default function About() {
