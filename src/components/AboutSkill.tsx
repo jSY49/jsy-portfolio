@@ -1,4 +1,5 @@
 import { skillList } from "../data/skill/skills";
+import getContrastColor from "../shared/Utils/getContrastColor";
 import styles from "./AboutSkill.module.css";
 
 export default function AboutSkill() {
@@ -23,7 +24,9 @@ export default function AboutSkill() {
 								<li
 									className={styles.skill_item}
 									key={value.text}
-									style={{ color: value.color }}
+									style={{
+										color: value.color
+									}}
 								>
 									{value.text}
 								</li>
