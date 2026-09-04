@@ -6,7 +6,7 @@ import {
 	LuServer,
 	LuWrench,
 } from "react-icons/lu";
-import { SiAndroid, SiIos, SiReact } from "react-icons/si";
+import { SiAndroid, SiApple, SiReact } from "react-icons/si";
 
 // src/data/skills.ts
 export interface SkillValue {
@@ -29,7 +29,7 @@ export const skillList: SkillCategory[] = [
 			{ text: "Kotlin", color: "#7F52FF" },
 			{ text: "C#", color: "#239120" },
 			{ text: "TypeScript", color: "#3178C6" },
-			{ text: "JavaScript", color: "#F7DF1E" },
+			{ text: "JavaScript", color: "#dfc91b" },
 		],
 	},
 	{
@@ -46,7 +46,7 @@ export const skillList: SkillCategory[] = [
 		],
 	},
 	{
-		icon: SiIos,
+		icon: SiApple,
 		type: "iOS",
 		values: [
 			{ text: "Swift", color: "#F05138" },
@@ -56,7 +56,7 @@ export const skillList: SkillCategory[] = [
 	{
 		icon: SiReact,
 		type: "Cross-platform",
-		values: [{ text: "React Native", color: "#61DAFB" }],
+		values: [{ text: "React Native", color: "#5ac9e8" }],
 	},
 	{
 		icon: LuAppWindow,
@@ -68,16 +68,16 @@ export const skillList: SkillCategory[] = [
 	},
 	{
 		icon: LuGlobe,
-		type: "Frontend / Web",
+		type: "Frontend",
 		values: [
 			{ text: "HTML", color: "#E34F26" },
 			{ text: "CSS", color: "#1572B6" },
-			{ text: "React", color: "#61DAFB" },
+			{ text: "React", color: "#5ac9e8" },
 		],
 	},
 	{
 		icon: LuServer,
-		type: "Backend / DB",
+		type: "Backend",
 		values: [
 			{ text: "Supabase", color: "#3ECF8E" },
 			{ text: "Spring Boot", color: "#6DB33F" },
