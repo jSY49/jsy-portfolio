@@ -13,7 +13,7 @@ export default function About() {
 		<div className={styles.bg}>
 			<section className={styles.top}>
 				<div className={styles.about_profile}>
-					<p className={styles.title}>ABOUT ME</p>
+					{/* <p className={styles.title}>ABOUT ME</p> */}
 					<div className={styles.about_profile_detail}>
 						<img
 							className={styles.about_profile_img}
