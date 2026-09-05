@@ -61,6 +61,126 @@
 	padding: 12px 2rem 24px;
 	/* 내용이 max-height를 넘으면 스크롤 생성 (스크롤은 안쪽에서만, 버튼과 겹치지 않음) */
 	overflow-y: auto;
+	font-size: 14.5px;
+	line-height: 1.7;
+	color: #333;
+}
+
+.modalBody > *:first-child {
+	margin-top: 0;
+}
+
+.modalBody h1,
+.modalBody h2,
+.modalBody h3,
+.modalBody h4,
+.modalBody h5,
+.modalBody h6 {
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 28px 0 12px;
+}
+
+.modalBody h1 {
+	font-size: 22px;
+}
+
+.modalBody h2 {
+	font-size: 19px;
+}
+
+.modalBody h3 {
+	font-size: 16px;
+}
+
+.modalBody p {
+	margin: 0 0 14px;
+}
+
+.modalBody ul,
+.modalBody ol {
+	margin: 0 0 14px;
+	padding-left: 1.4em;
+}
+
+.modalBody li {
+	margin-bottom: 4px;
+}
+
+.modalBody li > ul,
+.modalBody li > ol {
+	margin-top: 4px;
+	margin-bottom: 0;
+}
+
+.modalBody blockquote {
+	margin: 0 0 14px;
+	padding: 4px 16px;
+	border-left: 3px solid #d7dbe6;
+	color: #6e7480;
+	background: #f8f9fc;
+}
+
+.modalBody pre {
+	margin: 0 0 14px;
+	padding: 14px;
+	background: #f6f7fa;
+	border-radius: 8px;
+	overflow-x: auto;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.modalBody code {
+	background: #f0f1f5;
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 0.9em;
+}
+
+.modalBody pre code {
+	background: none;
+	padding: 0;
+}
+
+.modalBody table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 0 14px;
+	font-size: 14px;
+}
+
+.modalBody th,
+.modalBody td {
+	border: 1px solid #e7e9ef;
+	padding: 8px 12px;
+	text-align: left;
+}
+
+.modalBody th {
+	background: #f8f9fc;
+	font-weight: 700;
+}
+
+.modalBody hr {
+	border: none;
+	border-top: 1px solid #eceef3;
+	margin: 24px 0;
+}
+
+.modalBody a {
+	color: #4a5fe0;
+	text-decoration: underline;
+}
+
+.modalBody img {
+	max-width: 100%;
+	border-radius: 8px;
+	margin: 8px 0;
+}
+
+.modalBody input[type="checkbox"] {
+	margin-right: 6px;
 }
 
 .closeButton {
