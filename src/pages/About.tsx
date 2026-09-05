@@ -5,6 +5,7 @@ import github from "../assets/icons/github.svg";
 import mail from "../assets/icons/mail.svg";
 import phone from "../assets/icons/phone.svg";
 import pen from "../assets/icons/pen.svg";
+import profile from "../assets/icons/profile.svg";
 import AboutSkill from "../components/AboutSkill";
 import { TbCertificate } from "react-icons/tb";
 
@@ -35,6 +36,8 @@ export default function About() {
                 <AboutInfo src={birth} type="생년월일" value="1997.04.09" />
 
                 <AboutInfo src={pen} type="학력" value="소프트웨어응용 전공" />
+
+                <AboutInfo src={profile} type="실무 경력" value="2년 8개월" />
 
                 <AboutInfo src={phone} type="연락처" value="010-0000-0000" />
 

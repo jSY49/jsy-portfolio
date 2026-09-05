@@ -23,7 +23,7 @@
     auto-fit,
     minmax(max(200px, calc(50% - 15px)), 1fr)
   );
-  align-items: center;
+  align-items: stretch;
   gap: 16px;
   min-width: 0;
   padding: 0px 2rem;
