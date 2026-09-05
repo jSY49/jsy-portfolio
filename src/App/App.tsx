@@ -18,6 +18,7 @@ function App() {
 						<li className={styles.nav_item}>
 							<NavLink
 								to={"/"}
+								replace
 								className={({ isActive }) =>
 									isActive
 										? `${styles.nav_link} ${styles.nav_link_active}`
@@ -30,6 +31,7 @@ function App() {
 						<li className={styles.nav_item}>
 							<NavLink
 								to={"/projects"}
+								replace
 								className={({ isActive }) =>
 									isActive
 										? `${styles.nav_link} ${styles.nav_link_active}`
@@ -42,6 +44,7 @@ function App() {
 						<li className={styles.nav_item}>
 							<NavLink
 								to={"/career"}
+								replace
 								className={({ isActive }) =>
 									isActive
 										? `${styles.nav_link} ${styles.nav_link_active}`
