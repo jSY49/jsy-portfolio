@@ -26,7 +26,7 @@
   margin: 1rem 2rem;
   border-radius: 12px;
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e7e9ef;
   margin-bottom: 20px;
 }
 
@@ -45,12 +45,15 @@
   border-radius: 50%;
   overflow: hidden; /* 요소를 넘어가는 부분 숨기기*/
   background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .corp_image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* cover : 비율 유지하며 꽉 채움 */
+  width: 65%;
+  height: 65%;
+  object-fit: contain; /* cover : 비율 유지하며 꽉 채움 */
 }
 
 .career_info {

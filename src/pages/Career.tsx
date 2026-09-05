@@ -1,4 +1,5 @@
 import styles from "./Career.module.css";
+import { LuBriefcase, LuGraduationCap } from "react-icons/lu";
 
 export default function Career() {
 	return (
@@ -6,10 +7,9 @@ export default function Career() {
 			<h2 className={styles.title}>Career</h2>
 			<article className={styles.career}>
 				<div className={styles.corp_image_wrapper}>
-					<img
+					<LuBriefcase
 						className={styles.corp_image}
-						src=""
-						alt=""
+						color="#3b60e4"
 					/>
 				</div>
 				<div className={styles.career_info}>
@@ -31,10 +31,9 @@ export default function Career() {
 			<h2 className={styles.title}>Education</h2>
 			<article className={styles.career}>
 				<div className={styles.corp_image_wrapper}>
-					<img
+					<LuGraduationCap
 						className={styles.corp_image}
-						src=""
-						alt=""
+						color="#3b60e4"
 					/>
 				</div>
 				<div className={styles.career_info}>
