@@ -6,6 +6,7 @@
 	justify-content: center;
 	z-index: 1000; /* 다른 요소들보다 위 레이어에 그려지게*/
 	align-items: center;
+	animation: overlayFadeIn 0.18s ease-out;
 }
 
 .modal {
@@ -17,6 +18,27 @@
 	max-height: 85vh;
 	display: flex;
 	flex-direction: column;
+	animation: modalPopIn 0.2s ease-out;
+}
+
+@keyframes overlayFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modalPopIn {
+	from {
+		opacity: 0;
+		transform: scale(0.96) translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 .modalHeader {
@@ -60,6 +82,5 @@
 }
 
 /* 챗봇 */
-.chat_container{
-	
+.chat_container {
 }

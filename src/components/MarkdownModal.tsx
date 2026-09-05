@@ -17,17 +17,21 @@ export default function MarkdownModal({
 	filePath,
 }: MarkdownModalProps) {
 	const [content, setContent] = useState("");
-
+	const [loadedPath, setLoadedPath] = useState<string | null>(null); // 이전 내용 노출 안되도록
 	useEffect(() => {
 		if (isOpen) {
 			fetch(filePath)
 				.then((res) => res.text())
-				.then((text) => setContent(text));
+				.then((text) => {
+					setContent(text);
+					setLoadedPath(filePath);
+				});
 		}
 	}, [isOpen, filePath]);
 
 	if (!isOpen) return null;
 
+	const isStale = loadedPath !== filePath;
 
 	return (
 		<div
@@ -50,13 +54,17 @@ export default function MarkdownModal({
 				</div>
 				<hr className={styles.divider} />
 				<div className={styles.modalBody}>
-					<ReactMarkdown>{content}</ReactMarkdown>
+					{isStale ? (
+						<p className={styles.loading_text}>불러오는 중...</p>
+					) : (
+						<ReactMarkdown>{content}</ReactMarkdown>
+					)}
 				</div>
 
 				{/* 챗봇 */}
 				<div className={styles.chat_container}>
 					<div className={styles.chat_header}>
-						 <SiGooglegemini/>
+						<SiGooglegemini />
 					</div>
 				</div>
 			</div>
