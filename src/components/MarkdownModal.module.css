@@ -64,6 +64,9 @@
 }
 
 .closeButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 8px;
 	padding: 0.5rem;
 	border-radius: 50%;
@@ -79,8 +82,4 @@
 
 .closeButton:hover {
 	background-color: #edf1fe;
-}
-
-/* 챗봇 */
-.chat_container {
 }

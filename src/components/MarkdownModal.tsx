@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "./MarkdownModal.module.css";
-import { SiGooglegemini } from "react-icons/si";
+import { LuX } from "react-icons/lu";
+import ProjectChat from "./ProjectChat";
 
 interface MarkdownModalProps {
 	title: string | null;
@@ -29,6 +30,15 @@ export default function MarkdownModal({
 		}
 	}, [isOpen, filePath]);
 
+	useEffect(() => {
+		if (!isOpen) return;
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "Escape") onClose();
+		};
+		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
+	}, [isOpen, onClose]);
+
 	if (!isOpen) return null;
 
 	const isStale = loadedPath !== filePath;
@@ -48,8 +58,9 @@ export default function MarkdownModal({
 					<button
 						className={styles.closeButton}
 						onClick={onClose}
+						aria-label="닫기"
 					>
-						✕
+						<LuX size={16} />
 					</button>
 				</div>
 				<hr className={styles.divider} />
@@ -61,12 +72,7 @@ export default function MarkdownModal({
 					)}
 				</div>
 
-				{/* 챗봇 */}
-				<div className={styles.chat_container}>
-					<div className={styles.chat_header}>
-						<SiGooglegemini />
-					</div>
-				</div>
+				<ProjectChat />
 			</div>
 		</div>
 	);
