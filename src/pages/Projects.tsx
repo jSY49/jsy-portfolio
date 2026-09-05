@@ -16,7 +16,9 @@ export default function Projects() {
 	});
 
 	const [selectedProject, setSelectedProject] = useState<string | null>(null);
-	const [selectedProjectTitle, setSelectedProjectTitle] = useState<string | null>(null);
+	const [selectedProjectTitle, setSelectedProjectTitle] = useState<
+		string | null
+	>(null);
 
 	if (isLoading) {
 		return (
@@ -58,7 +60,7 @@ export default function Projects() {
 				))}
 			</div>
 			<MarkdownModal
-				title = {selectedProjectTitle}
+				title={selectedProjectTitle}
 				isOpen={selectedProject !== null}
 				onClose={() => {
 					setSelectedProject(null);
