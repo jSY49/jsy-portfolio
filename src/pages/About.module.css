@@ -19,7 +19,8 @@
   align-items: center;
   justify-content: center;
   min-height: 0;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
+  margin: 1rem 2rem;
 }
 
 .title {
@@ -126,7 +127,7 @@
   border-radius: 12px;
   background-color: #fff;
   border: 1px solid #e7e9ef;
-  margin: 32px 16px 32px 20px;
+  margin: 32px 2rem;
 }
 
 .corp_image_wrapper {

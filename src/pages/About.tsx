@@ -15,7 +15,7 @@ export default function About() {
         <div className={styles.about_profile}>
           {/* <p className={styles.title}>ABOUT ME</p> */}
           <div className={styles.about_profile_detail}>
-            <img className={styles.about_profile_img} src="/profile.jpg" alt="프로필 사진" />
+            {/* <img className={styles.about_profile_img} src="/profile.jpg" alt="프로필 사진" /> */}
 
             <div className={styles.about_info}>
               <div className={styles.about_summary}>
