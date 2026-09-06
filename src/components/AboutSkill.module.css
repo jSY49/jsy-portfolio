@@ -17,6 +17,14 @@
   align-items: flex-start;
   gap: 32px;
   padding: 0;
+  width: 100%;
+}
+
+.skill_header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .skill_image {
@@ -48,4 +56,21 @@
   border-radius: 0.5rem;
   margin-top: 4px;
   width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1.25rem;
+    margin: 1rem;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .skill_type {
+    width: auto;
+  }
 }

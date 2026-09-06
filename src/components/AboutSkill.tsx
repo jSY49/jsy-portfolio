@@ -11,11 +11,13 @@ export default function AboutSkill() {
 						className={styles.skills}
 						key={skill.type}
 					>
-						<Icon
-							className={styles.skill_image}
-							color={skill.values[0].color}
-						/>
-						<h4 className={styles.skill_type}>{skill.type}</h4>
+						<div className={styles.skill_header}>
+							<Icon
+								className={styles.skill_image}
+								color={skill.values[0].color}
+							/>
+							<h4 className={styles.skill_type}>{skill.type}</h4>
+						</div>
 						<ul className={styles.skill_list}>
 							{skill.values.map((value) => (
 								// TODO 스타일 적용
