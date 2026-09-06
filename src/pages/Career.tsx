@@ -59,7 +59,7 @@ export default function Career() {
 				</div>
 				<div className={styles.career_info}>
 					<h3 className={styles.corp_name}>현대오토에버 모빌리티 SW 스쿨</h3>
-					<p className={styles.period}>2026.07 ~ 2026.12 (6개월)</p>
+					<p className={styles.period}>2026.07 - 2026.12 (6개월)</p>
 					<p className={styles.corp_desc}>
 						한국전파진흥협회(RAPA)와 현대오토에버, 현대엔지비가 공동 운영하는
 						채용연계형 SW 교육 과정으로, 웹/앱 분야 총 1,000시간 커리큘럼 수료

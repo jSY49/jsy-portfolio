@@ -16,8 +16,10 @@
 
 .header {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	gap: 8px 16px;
 	padding: 24px 16px;
 	/* 헤더 상단 고정*/
 	position: sticky;
@@ -46,6 +48,7 @@
 	font-size: 21px;
 	/* 글자 자간 */
 	letter-spacing: -0.02em;
+	white-space: nowrap;
 }
 
 .header_nav {
