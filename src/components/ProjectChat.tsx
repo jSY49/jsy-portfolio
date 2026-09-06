@@ -91,8 +91,18 @@ export default function ProjectChat({ project }: ProjectChatProps) {
 				}),
 			});
 
-			if (!res.ok) throw new Error("요청 실패");
 			const data = await res.json();
+
+			if (!res.ok) {
+				// 429(RATE_LIMIT)는 Gemini 무료 할당량 초과 상황이라 원인을 구분해서 안내
+				const fallback =
+					data?.error === "RATE_LIMIT"
+						? "오늘 챗봇 사용량이 많아 잠시 후 다시 이용해주세요."
+						: "죄송해요, 답변을 가져오지 못했어요.";
+				setMessages((prev) => [...prev, { role: "model", text: fallback }]);
+				return;
+			}
+
 			setMessages((prev) => [...prev, { role: "model", text: data.text }]);
 		} catch (e) {
 			console.error(e);

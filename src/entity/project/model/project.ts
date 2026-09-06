@@ -4,6 +4,7 @@ export interface Project {
 	summary: string;
 	repository_url: string;
 	slug: string;
+	thumbnail: string;
 	created_at: string;
 }
 
@@ -12,4 +13,5 @@ export interface ProjectDetail {
 	tags: string[];
 	period: string;
 	teamSize: number;
+	thumbnail: string;
 }

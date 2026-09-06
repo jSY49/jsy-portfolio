@@ -50,6 +50,7 @@ export default function Projects() {
 						title={project.title}
 						summary={project.summary}
 						repository_url={project.repository_url}
+						thumbnail={project.thumbnail}
 						onClick={() => setSelectedProject(project)}
 					/>
 				))}

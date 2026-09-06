@@ -33,6 +33,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 		res.status(200).json({ text: response.text ?? "" });
 	} catch (e) {
 		console.error(e);
-		res.status(500).json({ error: "Gemini 호출 실패" });
+		// GoogleGenAI SDK가 던지는 에러엔 실제 HTTP 상태코드가 status로 붙어있음
+		const status = (e as { status?: number })?.status;
+		if (status === 429) {
+			res.status(429).json({ error: "RATE_LIMIT" });
+			return;
+		}
+		res.status(500).json({ error: "UNKNOWN" });
 	}
 }
