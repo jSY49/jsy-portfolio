@@ -4,12 +4,12 @@ import { LuBriefcase, LuGraduationCap } from "react-icons/lu";
 export default function Career() {
 	return (
 		<section className={styles.container}>
-			<h2 className={styles.title}>Career</h2>
+			<h2 className={styles.title}>CAREER</h2>
 			<article className={styles.career}>
 				<div className={styles.corp_image_wrapper}>
 					<LuBriefcase
 						className={styles.corp_image}
-						color="#3b60e4"
+						color="#3f6b52"
 					/>
 				</div>
 				<div className={styles.career_info}>
@@ -49,12 +49,12 @@ export default function Career() {
 				</div>
 			</article>
 
-			<h2 className={styles.title}>Education</h2>
+			<h2 className={styles.title}>EDUCATION</h2>
 			<article className={styles.career}>
 				<div className={styles.corp_image_wrapper}>
 					<LuGraduationCap
 						className={styles.corp_image}
-						color="#3b60e4"
+						color="#3f6b52"
 					/>
 				</div>
 				<div className={styles.career_info}>

@@ -169,7 +169,7 @@
 }
 
 .modalBody a {
-	color: #4a5fe0;
+	color: var(--color-primary);
 	text-decoration: underline;
 }
 
@@ -201,5 +201,5 @@
 }
 
 .closeButton:hover {
-	background-color: #edf1fe;
+	background-color: var(--color-primary-tint-bg);
 }

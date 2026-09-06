@@ -9,13 +9,14 @@
 }
 
 .title {
+  font-family: var(--font-heading);
   font-size: 24px;
+  font-weight: 600;
   width: 100%;
   align-self: flex-start;
   padding: 0px 2rem;
-  font-weight: normal;
-  letter-spacing: 0.14em;
-  color: #3b60e4;
+  letter-spacing: 0;
+  color: var(--color-primary);
 }
 
 .career {
@@ -83,10 +84,10 @@
   display: inline-block;
   font-size: 13px;
   font-weight: 600;
-  color: #3178c6;
-  background-color: #e8f0fe;
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-tint-bg);
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: 6px;
   margin-top: 4px;
   width: fit-content;
 }
@@ -117,7 +118,7 @@
   color: #fff;
   background-color: #6c757d;
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: 6px;
 }
 
 @media (max-width: 640px) {

@@ -92,7 +92,7 @@ export default function About() {
 							<div className={styles.corp_image_wrapper}>
 								<TbCertificate
 									className={styles.corp_image}
-									color="#3b60e4"
+									color="#3f6b52"
 								/>
 							</div>
 							<div className={styles.career_info}>

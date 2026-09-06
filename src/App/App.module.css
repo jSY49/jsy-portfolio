@@ -11,6 +11,7 @@
 	flex-direction: column;
 	flex: 1;
 	width: 100%;
+	background: var(--color-bg-subtle);
 }
 
 .header {
@@ -36,7 +37,7 @@
 	width: 10px;
 	height: 10px;
 	align-self: center;
-	background-color: #3b60e4;
+	background-color: var(--color-primary);
 	border-radius: 4px;
 }
 
@@ -66,13 +67,13 @@
 }
 
 .nav_link:hover {
-	background-color: #edf1fe;
+	background-color: var(--color-primary-tint-bg);
 }
 
 .nav_link_active {
-	color: #3178c6;
+	color: var(--color-primary-dark);
 	font-size: 15px;
-	background-color: #edf1fe;
+	background-color: var(--color-primary-tint-bg);
 	padding: 9px 16px;
 	border-radius: 9px;
 	font-weight: 700;

@@ -30,11 +30,18 @@ export default function ProjectItem({
 			className={styles.container}
 			onClick={onClick}
 		>
-			<img
-				className={styles.project_main_img}
-				src={thumbnail}
-				alt="대표 이미지"
-			/>
+			{thumbnail ? (
+				<img
+					className={styles.project_main_img}
+					src={thumbnail}
+					alt="대표 이미지"
+				/>
+			) : (
+				<div
+					className={styles.project_main_img}
+					aria-hidden="true"
+				/>
+			)}
 
 			<h4 className={styles.title}>{title}</h4>
 			<p className={styles.meta}>

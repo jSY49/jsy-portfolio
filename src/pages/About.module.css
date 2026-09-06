@@ -1,5 +1,4 @@
 .bg {
-  background: linear-gradient(180deg, #edf1fe 0%, #ffffff 20%);
   display: flex;
   flex-direction: column;
 }
@@ -24,13 +23,14 @@
 }
 
 .title {
+  font-family: var(--font-heading);
   font-size: 24px;
+  font-weight: 600;
   width: 100%;
   align-self: flex-start;
   padding: 0px 2rem;
-  font-weight: normal;
-  letter-spacing: 0.14em;
-  color: #3b60e4;
+  letter-spacing: 0;
+  color: var(--color-primary);
 }
 
 .about_profile_detail {
@@ -47,8 +47,8 @@
   width: 200px;
   background: repeating-linear-gradient(
     135deg,
-    #f3f6fe 0 10px,
-    #e9eefc 10px 20px
+    var(--color-pattern-1) 0 10px,
+    var(--color-pattern-2) 10px 20px
   ); /*이미지 없어서 영역 볼려구 임시*/
   border-radius: 1rem;
   box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.09);
@@ -69,13 +69,14 @@
 }
 
 .about_summary_name {
-  font-size: 46px;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 50px;
+  font-weight: 600;
 }
 .about_summary_job {
   font-size: 19px;
   font-weight: 500px;
-  color: #3b60e4;
+  color: var(--color-primary);
 }
 .about_summary_desc {
   margin: 0 0 36px;
