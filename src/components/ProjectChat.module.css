@@ -68,6 +68,35 @@
 	border-radius: 14px;
 	font-size: 14px;
 	max-width: 80%;
+	word-break: break-word;
+}
+
+/* ReactMarkdown이 렌더링하는 기본 태그들 여백 정리 */
+.modelMsg p {
+	margin: 0 0 8px;
+}
+
+.modelMsg p:last-child {
+	margin-bottom: 0;
+}
+
+.modelMsg ul,
+.modelMsg ol {
+	margin: 0 0 8px;
+	padding-left: 18px;
+}
+
+.modelMsg h1,
+.modelMsg h2,
+.modelMsg h3 {
+	font-size: 14px;
+	margin: 8px 0 4px;
+}
+
+.modelMsg hr {
+	border: none;
+	border-top: 1px solid #dde1eb;
+	margin: 8px 0;
 }
 
 .inputRow {
