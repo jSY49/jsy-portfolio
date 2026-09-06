@@ -14,4 +14,5 @@ export interface ProjectDetail {
 	period: string;
 	teamSize: number;
 	thumbnail: string;
+	projectType: "personal" | "company";
 }

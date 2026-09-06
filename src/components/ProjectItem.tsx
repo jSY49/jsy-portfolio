@@ -30,18 +30,34 @@ export default function ProjectItem({
 			className={styles.container}
 			onClick={onClick}
 		>
-			{thumbnail ? (
-				<img
-					className={styles.project_main_img}
-					src={thumbnail}
-					alt="대표 이미지"
-				/>
-			) : (
-				<div
-					className={styles.project_main_img}
-					aria-hidden="true"
-				/>
-			)}
+			<div className={styles.thumbnail_wrapper}>
+				{thumbnail ? (
+					<img
+						className={styles.project_main_img}
+						src={thumbnail}
+						alt="대표 이미지"
+					/>
+				) : (
+					<div
+						className={styles.project_main_img}
+						aria-hidden="true"
+					/>
+				)}
+
+				{detail?.projectType && (
+					<span
+						className={`${styles.badge} ${
+							detail.projectType === "personal"
+								? styles.badge_personal
+								: styles.badge_company
+						}`}
+					>
+						{detail.projectType === "personal"
+							? "개인 프로젝트"
+							: "회사 프로젝트"}
+					</span>
+				)}
+			</div>
 
 			<h4 className={styles.title}>{title}</h4>
 			<p className={styles.meta}>

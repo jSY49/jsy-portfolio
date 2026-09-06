@@ -14,10 +14,15 @@
 	border-color: var(--color-primary);
 }
 
+.thumbnail_wrapper {
+	position: relative;
+	margin-bottom: 8px;
+}
+
 .project_main_img {
 	width: 100%;
 	height: 150px;
-	margin-bottom: 8px;
+	margin-bottom: 0;
 	border-radius: 8px;
 	object-fit: cover;
 	object-position: top;
@@ -26,6 +31,26 @@
 		var(--color-pattern-1) 0 10px,
 		var(--color-pattern-2) 10px 20px
 	); /*이미지 없어서 영역 볼려구 임시*/
+}
+
+.badge {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 4px 10px;
+	border-radius: 6px;
+}
+
+.badge_personal {
+	background-color: #e7f0fd;
+	color: #2f6fd1;
+}
+
+.badge_company {
+	background-color: #eceef3;
+	color: #5b6472;
 }
 
 .meta {
