@@ -1,7 +1,7 @@
 import { LuArrowUp, LuSparkles } from "react-icons/lu";
 import styles from "./ProjectChat.module.css";
 import type { Project, ProjectDetail } from "../entity/project/model/project";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import ReactMarkdown from "react-markdown";
 import getGithubContext, {
@@ -56,6 +56,12 @@ export default function ProjectChat({ project }: ProjectChatProps) {
 	const [messages, setMessages] = useState<ChatMessage[]>([]);
 	const [input, setInput] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
+	// 메시지 목록 맨 아래에 놓기. 여기로 스크롤시켜서 "맨 아래로 이동" 효과를 냄
+	const bottomRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+	}, [messages, isLoading]);
 
 	// project(repository_url)가 바뀔 때만 다시 불러오고, 같은 프로젝트면 30분간 캐시된 값을 재사용
 	const { data: githubContext, isFetching: isGithubLoading } = useQuery({
@@ -111,17 +117,24 @@ export default function ProjectChat({ project }: ProjectChatProps) {
 			<div className={styles.messages}>
 				{messages.map((m, idx) =>
 					m.role === "user" ? (
-						<p key={idx} className={styles.userMsg}>
+						<p
+							key={idx}
+							className={styles.userMsg}
+						>
 							{m.text}
 						</p>
 					) : (
 						// 모델 답변은 마크다운(굵게, 목록, 줄바꿈 등)을 실제로 렌더링해서 보여줌
-						<div key={idx} className={styles.modelMsg}>
+						<div
+							key={idx}
+							className={styles.modelMsg}
+						>
 							<ReactMarkdown>{m.text}</ReactMarkdown>
 						</div>
-					)
+					),
 				)}
 				{isLoading && <p className={styles.modelMsg}>생각하는 중...</p>}
+				<div ref={bottomRef} />
 			</div>
 
 			<div className={styles.inputRow}>
