@@ -15,7 +15,7 @@ export default function AboutInfo({
 }: AboutInfoProps) {
 	return (
 		<div
-			className={styles.container}
+			className={`${styles.container} ${onClick ? styles.clickable : ""}`}
 			onClick={onClick}
 		>
 			<div className={styles.img}>
