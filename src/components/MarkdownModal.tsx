@@ -3,16 +3,17 @@ import ReactMarkdown from "react-markdown";
 import styles from "./MarkdownModal.module.css";
 import { LuX } from "react-icons/lu";
 import ProjectChat from "./ProjectChat";
+import type { Project } from "../entity/project/model/project";
 
 interface MarkdownModalProps {
-	title: string | null;
+	project: Project | null;
 	isOpen: boolean;
 	onClose: () => void;
 	filePath: string;
 }
 
 export default function MarkdownModal({
-	title,
+	project,
 	isOpen,
 	onClose,
 	filePath,
@@ -54,7 +55,7 @@ export default function MarkdownModal({
 				onClick={(e) => e.stopPropagation()}
 			>
 				<div className={styles.modalHeader}>
-					<h1 className={styles.modal_title}>{title}</h1>
+					<h1 className={styles.modal_title}>{project?.title}</h1>
 					<button
 						className={styles.closeButton}
 						onClick={onClose}
@@ -72,7 +73,7 @@ export default function MarkdownModal({
 					)}
 				</div>
 
-				<ProjectChat />
+				<ProjectChat key={project?.id} project={project} />
 			</div>
 		</div>
 	);

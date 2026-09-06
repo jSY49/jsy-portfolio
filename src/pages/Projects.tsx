@@ -4,6 +4,7 @@ import { useState } from "react";
 import MarkdownModal from "../components/MarkdownModal";
 import styles from "./Projects.module.css";
 import ProjectItem from "../components/ProjectItem";
+import type { Project } from "../entity/project/model/project";
 
 export default function Projects() {
 	const {
@@ -15,10 +16,7 @@ export default function Projects() {
 		queryFn: getProjects,
 	});
 
-	const [selectedProject, setSelectedProject] = useState<string | null>(null);
-	const [selectedProjectTitle, setSelectedProjectTitle] = useState<
-		string | null
-	>(null);
+	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
 	if (isLoading) {
 		return (
@@ -52,21 +50,15 @@ export default function Projects() {
 						title={project.title}
 						summary={project.summary}
 						repository_url={project.repository_url}
-						onClick={() => {
-							setSelectedProject(`/docs/${project.slug}.md`);
-							setSelectedProjectTitle(project.title);
-						}}
+						onClick={() => setSelectedProject(project)}
 					/>
 				))}
 			</div>
 			<MarkdownModal
-				title={selectedProjectTitle}
+				project={selectedProject}
 				isOpen={selectedProject !== null}
-				onClose={() => {
-					setSelectedProject(null);
-					setSelectedProjectTitle(null);
-				}}
-				filePath={selectedProject ?? ""}
+				onClose={() => setSelectedProject(null)}
+				filePath={selectedProject ? `/docs/${selectedProject.slug}.md` : ""}
 			/>
 		</div>
 	);
