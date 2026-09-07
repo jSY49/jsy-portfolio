@@ -42,7 +42,7 @@ export default async function getGithubContext(
 		// GitHub API의 README 전용 엔드포인트를 사용 (브랜치 이름을 몰라도 항상 기본 브랜치의 README를 찾아줌)
 		fetch(`https://api.github.com/repos/${owner}/${repo}/readme`),
 		// GitHub REST API: 최근 커밋 10개를 최신순으로 조회
-		fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=10`),
+		fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=50`),
 	]);
 
 	// README가 없거나(404 등) 요청이 실패하면 빈 문자열로 처리 (챗봇이 죽지 않도록)
