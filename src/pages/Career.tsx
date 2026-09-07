@@ -48,7 +48,6 @@ export default function Career() {
 					</ul>
 				</div>
 			</article>
-
 			<h2 className={styles.title}>EDUCATION</h2>
 			<article className={styles.career}>
 				<div className={styles.corp_image_wrapper}>
@@ -74,6 +73,30 @@ export default function Career() {
 						<li>Java</li>
 						<li>spring boot</li>
 					</ul>
+				</div>
+			</article>
+			<article className={styles.career}>
+				<div className={styles.corp_image_wrapper}>
+					<LuGraduationCap
+						className={styles.corp_image}
+						color="#3f6b52"
+					/>
+				</div>
+				<div className={styles.career_info}>
+					<h3 className={styles.corp_name}>00대학교</h3>
+					<p className={styles.period}>2016.03 - 2023.02</p>
+					<p className={styles.corp_desc}>
+						소프트웨어응용학부 소프트웨어전공 (3.86/4.5)
+					</p>
+
+					<p className={styles.position}>수상내역</p>
+					<p className={styles.award_date}>2022.12</p>
+					<p className={styles.award_title}>
+						소프트웨어응용학부 졸업 작품 전시회 장려상
+					</p>
+					<p className={styles.award_project}>
+						어디로든 — 여행지 조회 및 상품 예약 안드로이드 앱
+					</p>
 				</div>
 			</article>
 		</section>
