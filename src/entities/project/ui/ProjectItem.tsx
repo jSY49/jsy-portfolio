@@ -1,5 +1,5 @@
 import { LuArrowRight } from "react-icons/lu";
-import type { ProjectDetail } from "../entity/project/model/project";
+import type { ProjectDetail } from "../model/project";
 import styles from "./ProjectItem.module.css";
 import { FaGithub } from "react-icons/fa";
 

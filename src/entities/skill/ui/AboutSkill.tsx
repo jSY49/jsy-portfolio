@@ -1,4 +1,4 @@
-import { skillList } from "../data/skill/skills";
+import { skillList } from "../../skill/model/skills";
 import styles from "./AboutSkill.module.css";
 
 export default function AboutSkill() {

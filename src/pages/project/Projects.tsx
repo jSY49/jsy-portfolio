@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import getProjects from "../shared/api/getProjecs";
+import getProjects from "../../entities/project/api/getProjecs";
 import { useState } from "react";
-import MarkdownModal from "../components/MarkdownModal";
+import MarkdownModal from "../../features/project-detail/ui/MarkdownModal";
 import styles from "./Projects.module.css";
-import ProjectItem from "../components/ProjectItem";
-import type { Project } from "../entity/project/model/project";
+import ProjectItem from "../../entities/project/ui/ProjectItem";
+import type { Project } from "../../entities/project/model/project";
 
 export default function Projects() {
 	const {

@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "./MarkdownModal.module.css";
 import { LuX } from "react-icons/lu";
-import ProjectChat from "./ProjectChat";
-import type { Project } from "../entity/project/model/project";
+import ProjectChat from "../../project-chat/ui/ProjectChat";
+import type { Project } from "../../../entities/project/model/project";
 import rehypeRaw from "rehype-raw";
-import getProjectBody from "../shared/api/getProjecBody";
+import getProjectBody from "../../../entities/project/api/getProjecBody";
 import { useQuery } from "@tanstack/react-query";
 
 interface MarkdownModalProps {

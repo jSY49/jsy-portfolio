@@ -1,5 +1,5 @@
-import type { Project } from "../../entity/project/model/project";
-import { supabase } from "./supabase";
+import type { Project } from "../model/project";
+import { supabase } from "../../../shared/api/supabase";
 
 export default async function getProjects(): Promise<Project[]> {
 	const { data, error } = await supabase

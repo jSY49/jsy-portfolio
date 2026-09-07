@@ -1,12 +1,12 @@
-import AboutInfo from "../components/AboutInfo";
+import AboutInfo from "../../shared/ui/AboutInfo";
 import styles from "./About.module.css";
-import birth from "../assets/icons/birth.svg";
-import github from "../assets/icons/github.svg";
-import mail from "../assets/icons/mail.svg";
-import phone from "../assets/icons/phone.svg";
-import pen from "../assets/icons/pen.svg";
-import profile from "../assets/icons/profile.svg";
-import AboutSkill from "../components/AboutSkill";
+import birth from "../../assets/icons/birth.svg";
+import github from "../../assets/icons/github.svg";
+import mail from "../../assets/icons/mail.svg";
+import phone from "../../assets/icons/phone.svg";
+import pen from "../../assets/icons/pen.svg";
+import profile from "../../assets/icons/profile.svg";
+import AboutSkill from "../../entities/skill/ui/AboutSkill";
 import { TbCertificate } from "react-icons/tb";
 
 export default function About() {

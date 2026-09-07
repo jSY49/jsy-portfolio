@@ -1,12 +1,13 @@
 import { LuArrowUp, LuSparkles } from "react-icons/lu";
 import styles from "./ProjectChat.module.css";
-import type { Project, ProjectDetail } from "../entity/project/model/project";
+import type {
+	Project,
+	ProjectDetail,
+} from "../../../entities/project/model/project";
 import { useEffect, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import ReactMarkdown from "react-markdown";
-import getGithubContext, {
-	type GithubContext,
-} from "../shared/api/getGithubContext";
+import getGithubContext, { type GithubContext } from "../api/getGithubContext";
 
 interface ChatMessage {
 	role: "user" | "model";
@@ -156,7 +157,7 @@ export default function ProjectChat({ project }: ProjectChatProps) {
 					onKeyDown={(e) => {
 						// 한글 등 IME 조합 중 Enter로 조합을 확정할 때도 keydown이 발생하는데,
 						// 이때 전송하면 아직 state에 반영 안 된 마지막 글자가 이후 입력창에 남게 됨
-						//isComposing : 한/일/중 처럼 IME로 글자를 조합하는 중인지 아닌지 판별 
+						//isComposing : 한/일/중 처럼 IME로 글자를 조합하는 중인지 아닌지 판별
 						if (e.key === "Enter" && !e.nativeEvent.isComposing) handleSend();
 					}}
 					placeholder={

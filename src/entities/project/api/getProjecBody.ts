@@ -1,5 +1,5 @@
-import type { ProjectBody } from "../../entity/project/model/projectBody";
-import { supabase } from "./supabase";
+import type { ProjectBody } from "../model/projectBody";
+import { supabase } from "../../../shared/api/supabase";
 
 export default async function getProjectBody(
 	slug: string,
