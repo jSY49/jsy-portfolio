@@ -101,6 +101,7 @@
 	gap: 4px;
 	font-size: 14px;
 	color: #333;
+	text-align: left; /* 모바일에서 .career의 text-align: center가 상속되는 것 방지 */
 }
 
 .tech_stack {

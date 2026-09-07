@@ -144,7 +144,9 @@
 }
 
 .modalBody table {
+	display: block;
 	width: 100%;
+	overflow-x: auto;
 	border-collapse: collapse;
 	margin: 0 0 14px;
 	font-size: 14px;
@@ -202,4 +204,11 @@
 
 .closeButton:hover {
 	background-color: var(--color-primary-tint-bg);
+}
+
+@media (max-width: 640px) {
+	.modal_title {
+		margin: 4px;
+		font-size: 22px;
+	}
 }

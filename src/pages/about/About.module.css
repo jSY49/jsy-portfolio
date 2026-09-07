@@ -192,4 +192,14 @@
     height: auto; /* stretch 해제, aspect-ratio로만 크기 결정 */
     margin: 2rem 2rem;
   }
+
+  .certifi {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .certifi .career_info {
+    align-items: center;
+  }
 }
