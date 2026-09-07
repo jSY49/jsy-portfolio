@@ -52,9 +52,7 @@ export default function ProjectItem({
 								: styles.badge_company
 						}`}
 					>
-						{detail.projectType === "personal"
-							? "개인 프로젝트"
-							: "회사 프로젝트"}
+						{detail.projectType === "personal" ? "개인" : "회사"}
 					</span>
 				)}
 			</div>
