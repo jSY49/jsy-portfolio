@@ -4,6 +4,7 @@ import styles from "./MarkdownModal.module.css";
 import { LuX } from "react-icons/lu";
 import ProjectChat from "./ProjectChat";
 import type { Project } from "../entity/project/model/project";
+import rehypeRaw from "rehype-raw";
 
 interface MarkdownModalProps {
 	project: Project | null;
@@ -69,11 +70,14 @@ export default function MarkdownModal({
 					{isStale ? (
 						<p className={styles.loading_text}>불러오는 중...</p>
 					) : (
-						<ReactMarkdown>{content}</ReactMarkdown>
+						<ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
 					)}
 				</div>
 
-				<ProjectChat key={project?.id} project={project} />
+				<ProjectChat
+					key={project?.id}
+					project={project}
+				/>
 			</div>
 		</div>
 	);
