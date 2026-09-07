@@ -59,7 +59,6 @@ export default function Projects() {
 				project={selectedProject}
 				isOpen={selectedProject !== null}
 				onClose={() => setSelectedProject(null)}
-				filePath={selectedProject ? `/docs/${selectedProject.slug}.md` : ""}
 			/>
 		</div>
 	);
