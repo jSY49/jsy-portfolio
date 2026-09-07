@@ -33,12 +33,25 @@ export default function MarkdownModal({
 	}, [isOpen, filePath]);
 
 	useEffect(() => {
-		if (!isOpen) return;
+		if (!isOpen) {
+			document.body.style.overflow = ""; //스크롤 안되던거 해제 
+			return;
+		}
+
+		//esc 눌렀을 때 모달 off 
 		const handleKeyDown = (e: KeyboardEvent) => {
 			if (e.key === "Escape") onClose();
 		};
 		window.addEventListener("keydown", handleKeyDown);
-		return () => window.removeEventListener("keydown", handleKeyDown);
+
+		//모달 뒤로 화면 스크롤 안되도록 
+		document.body.style.overflow = "hidden";
+
+		return () => {
+			document.body.style.overflow = "";
+			window.removeEventListener("keydown", handleKeyDown);
+		}
+
 	}, [isOpen, onClose]);
 
 	if (!isOpen) return null;
@@ -52,7 +65,7 @@ export default function MarkdownModal({
 		>
 			<div
 				className={styles.modal}
-				// 바깥 배경 클릭 시에만 닫히고, 모달 내용 클릭 시에는 안 닫히도록
+				// 바깥 배경 클릭 시에만 닫히고, 모달 내용 클릭 시에는 안 닫히도록 부모의 onclick이 자식에 전파되지 않도록 막아주는 것 
 				onClick={(e) => e.stopPropagation()}
 			>
 				<div className={styles.modalHeader}>
