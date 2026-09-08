@@ -1,5 +1,5 @@
 import styles from "./Career.module.css";
-import { LuBriefcase, LuGraduationCap } from "react-icons/lu";
+import { LuBookText, LuBriefcase, LuGraduationCap } from "react-icons/lu";
 
 export default function Career() {
 	return (
@@ -51,7 +51,7 @@ export default function Career() {
 			<h2 className={styles.title}>EDUCATION</h2>
 			<article className={styles.career}>
 				<div className={styles.corp_image_wrapper}>
-					<LuGraduationCap
+					<LuBookText
 						className={styles.corp_image}
 						color="#3f6b52"
 					/>
