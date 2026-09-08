@@ -13,6 +13,5 @@ export interface ProjectDetail {
 	tags: string[];
 	period: string;
 	teamSize: number;
-	thumbnail: string;
 	projectType: "personal" | "company";
 }
