@@ -17,7 +17,11 @@ function App() {
 			<div className={styles.app}>
 				{/* content */}
 				{/* wait : 이전 페이지가 완전히 사라진 뒤 다음 페이지 나타나도록 함 (sync는 겹쳐서 ) */}
-				<AnimatePresence mode="wait">
+				{/* onExitComplete : 이전 페이지가 사라진 직후(화면에 안 보일 때) 스크롤을 최상단으로 리셋 */}
+				<AnimatePresence
+					mode="wait"
+					onExitComplete={() => window.scrollTo(0, 0)}
+				>
 					<Routes
 						location={location}
 						key={location.pathname}
